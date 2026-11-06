@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracking Pengiriman | Pustaka Senja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tracking">
+  <header class="topbar" id="navbar"></header>
+  <main class="wadah sempit">
+    <h1>Tracking pengiriman</h1>
+    <form id="formCari" class="kartu baris-form" novalidate>
+      <label for="noDO" class="sr">Nomor Delivery Order</label>
+      <input id="noDO" placeholder="Contoh: DO-2026-002">
+      <button class="btn" type="submit">Cari</button>
+    </form>
+    <section id="hasil" aria-live="polite"></section>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

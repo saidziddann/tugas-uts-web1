@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Masuk | Hanzz Pustaka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="login">
+    <main class="login-wrap">
+      <section class="login-hero" aria-label="Tentang toko">
+        <h1>Hanzz<span>Pustaka</span></h1>
+        <p>
+          Toko buku online untuk pembaca yang suka menunda tidur demi satu bab
+          lagi.Bukan Demi Dia
+        </p>
+        <div class="rak" aria-hidden="true">
+          <img src="img/kepemimpinan.jpg" alt="" style="--h: 78%" /><img
+            src="img/manajemen_keuangan.jpg"
+            alt=""
+            style="--h: 92%"
+          /><img src="img/mikrobiologi.jpg" alt="" style="--h: 84%" /><img
+            src="img/paud_perkembangan.jpg"
+            alt=""
+            style="--h: 70%"
+          /><img src="img/pengantar_komunikasi.jpg" alt="" style="--h: 88%" />
+        </div>
+      </section>
+      <section class="login-card">
+        <h2>Masuk ke akun</h2>
+        <form id="formLogin" novalidate>
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="admin@tokobuku.id"
+            autocomplete="username"
+            required
+          />
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="admin123"
+            autocomplete="current-password"
+            required
+          />
+          <button class="btn blok" type="submit">Login</button>
+        </form>
+        <div class="dua">
+          <button class="tautan" id="btnLupa" type="button">
+            Lupa Password
+          </button>
+          <button class="tautan" id="btnDaftar" type="button">Daftar</button>
+        </div>
+        <p class="petunjuk">Akun uji: admin@tokobuku.id / admin123</p>
+      </section>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Katalog & Stok | Pustaka Senja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stok">
+  <header class="topbar" id="navbar"></header>
+  <main class="wadah">
+    <h1>Informasi stok &amp; katalog</h1>
+    <section class="kartu" aria-labelledby="jTabel">
+      <div class="bar-alat">
+        <h2 id="jTabel">Daftar buku <small id="ringkas"></small></h2>
+        <input id="cari" type="search" placeholder="Cari judul, penulis, kode" aria-label="Cari buku">
+        <select id="filterKat" aria-label="Filter kategori"></select>
+        <div class="toggle" role="group" aria-label="Tampilan"><button type="button" data-tampil="tabel" aria-pressed="true">Tabel</button><button type="button" data-tampil="kartu" aria-pressed="false">Kartu</button></div>
+      </div>
+      <div id="gridBuku" class="grid-buku" hidden></div>
+      <div class="gulir" id="bungkusTabel">
+        <table>
+          <thead><tr><th>Sampul</th><th>Kode</th><th>Judul</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Aksi</th></tr></thead>
+          <tbody id="tbodyStok"></tbody>
+        </table>
+      </div>
+    </section>
+    <section class="kartu" aria-labelledby="jTambah">
+      <h2 id="jTambah">Tambah stok buku baru</h2>
+      <form id="formTambah" class="grid-form" novalidate>
+        <div><label for="judul">Judul</label><input id="judul" name="judul"></div>
+        <div><label for="penulis">Penulis</label><input id="penulis" name="penulis"></div>
+        <div><label for="kategoriBaru">Kategori</label><select id="kategoriBaru" name="kategori"></select></div>
+        <div><label for="harga">Harga (Rp)</label><input id="harga" name="harga" type="number" min="1"></div>
+        <div><label for="sampulBaru">Sampul</label><select id="sampulBaru" name="gambar"></select></div>
+        <div><label for="stok">Stok</label><input id="stok" name="stok" type="number" min="0" value="1"></div>
+        <div class="penuh"><p class="galat" id="galatTambah"></p>
+          <button class="btn" type="submit">Tambah ke tabel</button>
+          <button class="btn garis" id="btnReset" type="button">Reset data</button></div>
+      </form>
+    </section>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

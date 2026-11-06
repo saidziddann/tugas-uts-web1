@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pemesanan | Pustaka Senja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+  <header class="topbar" id="navbar"></header>
+  <main class="wadah dua-kolom">
+    <section>
+      <h1>Pemesanan</h1>
+      <div class="kartu">
+        <h2>Keranjang pesanan</h2>
+        <div class="gulir"><table><thead><tr><th>Buku</th><th>Jumlah</th><th>Subtotal</th><th></th></tr></thead><tbody id="tbodyKeranjang"></tbody></table></div>
+        <form id="formTambahBuku" class="baris-form">
+          <select id="pilihBuku" aria-label="Pilih buku"></select>
+          <input id="jumlahBuku" type="number" min="1" value="1" aria-label="Jumlah">
+          <button class="btn" type="submit">Tambah</button>
+        </form>
+      </div>
+    </section>
+    <section>
+      <form id="formPesan" class="kartu" novalidate>
+        <h2>Data pemesan</h2>
+        <label for="nama">Nama lengkap</label><input id="nama" name="nama">
+        <label for="emailPemesan">Email</label><input id="emailPemesan" name="emailPemesan" type="email">
+        <label for="hp">No. HP</label><input id="hp" name="hp" type="tel" placeholder="08xxxxxxxxxx">
+        <label for="alamat">Alamat pengiriman</label><textarea id="alamat" name="alamat" rows="3"></textarea>
+        <h2>Pengiriman &amp; pembayaran</h2>
+        <label for="ekspedisi">Ekspedisi</label><select id="ekspedisi" name="ekspedisi"></select>
+        <label for="jenisPaket">Jenis paket</label>
+        <select id="jenisPaket" name="jenisPaket"><option>Reguler</option><option>Express</option></select>
+        <fieldset><legend>Metode pembayaran</legend><div id="metodeBayar"></div><div id="panelBayar" class="panel-bayar" hidden></div></fieldset>
+        <dl class="rincian"><dt>Subtotal</dt><dd id="subtotal">Rp 0</dd><dt>Ongkos kirim</dt><dd id="ongkir">Rp 0</dd><dt>Total</dt><dd id="total" class="besar">Rp 0</dd></dl>
+        <button class="btn blok" type="submit">Buat pesanan</button>
+      </form>
+    </section>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
